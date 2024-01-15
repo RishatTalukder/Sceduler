@@ -1,4 +1,4 @@
 .vscode
-main app/__pycache__
+main_app/__pycache__
 test.py
 SCHEDULE.db

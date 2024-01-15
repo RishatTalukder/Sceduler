@@ -4,7 +4,7 @@
 SO, I have been doing a lot of stuff lately, and I have been learning a lot stuff too. And It became hard for me to keep track of all the things I have in mind. So, I decided to make a command line application to keep track of all the things I have in mind. I don't know what to name it, so i named it ***`SCHEDULER`***. I know it's not a good name, but I will change it later.
 
 Linkedin: https://www.linkedin.com/in/md-rishat-talukder-a22157239/
-Github: https://github.com/RishatTalukder/leetcoding
+Github: https://github.com/RishatTalukder/Sceduler
 Youtube: https://www.youtube.com/@itvaya
 
 prerequisites:

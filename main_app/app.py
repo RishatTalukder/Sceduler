@@ -15,13 +15,18 @@ class App:
         # fetch all the tasks from the completed table
         completed = self.db.fetch("Completed")
 
-        # print all the tasks
-        print(f"|{'TODOs':^20}|{'in progress':^20}|{'completed':^20}|")
-        print(f"|{'-'*20}|{'-'*20}|{'-'*20}|")
-        for todo, inp, comp in zip_longest(todos, in_progress, completed, fillvalue=" "):
-            print(f"|{todo[0]:^20}|{inp[0]:^20}|{comp[0]:^20}|")
 
-        print(f"|{'-'*20}|{'-'*20}|{'-'*20}|")
+        # Find the maximum length of data in each column
+        max_len_todo = max((len(str(todo[0])) for todo in todos), default=20) if todos else 20
+        max_len_inp = max((len(str(inp[0])) for inp in in_progress), default=20) if in_progress else 20
+        max_len_comp = max((len(str(comp[0])) for comp in completed), default=20) if completed else 20
+
+        # Use the maximum length to format the table
+        print(f"|{'TODOs':^{max_len_todo}}|{'in progress':^{max_len_inp}}|{'completed':^{max_len_comp}}|")
+        print(f"|{'-'*max_len_todo}|{'-'*max_len_inp}|{'-'*max_len_comp}|")
+        for todo, inp, comp in zip_longest(todos, in_progress, completed, fillvalue=" "):
+            print(f"|{str(todo[0]):^{max_len_todo}}|{str(inp[0]):^{max_len_inp}}|{str(comp[0]):^{max_len_comp}}|")
+        print(f"|{'-'*max_len_todo}|{'-'*max_len_inp}|{'-'*max_len_comp}|")
 
     def add_task(self, task):
         self.db.insert("Todo", task) 
