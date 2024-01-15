@@ -1,5 +1,5 @@
 <h1 align="center"> SCHEDULER </h1>
-<h4 align="center"> A command line Time Management Application </h4> 
+<h4 align="center"> A command line Schedule Management Application </h4> 
 
 SO, I have been doing a lot of stuff lately, and I have been learning a lot stuff too. And It became hard for me to keep track of all the things I have in mind. So, I decided to make a command line application to keep track of all the things I have in mind. I don't know what to name it, so i named it ***`SCHEDULER`***. I know it's not a good name, but I will change it later.
 
